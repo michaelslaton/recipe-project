@@ -1,12 +1,7 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 function RecipeList({recipes, setRecipes}) {
-
-  function handleDelete(index){
-    let newRecipes = [...recipes]
-      newRecipes.splice(index, 1);
-      setRecipes(newRecipes);
-  }
 
   const list = recipes.map((recipe, index) => {
       return (
@@ -27,7 +22,7 @@ function RecipeList({recipes, setRecipes}) {
               <p>{recipe.preparation}</p>
             </td>
             <td>
-            <button name="delete" onClick={()=> handleDelete(index)}>Delete</button>
+            <DeleteButton recipes={recipes} setRecipes={setRecipes} index={index}/>
             </td>
         </tr>
       )

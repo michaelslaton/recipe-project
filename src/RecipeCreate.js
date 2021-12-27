@@ -12,11 +12,10 @@ function RecipeCreate({ recipes, setRecipes}) {
     })
   };
   
-  async function handleCreate(event){
+  function handleCreate(event){
     event.preventDefault();
     setRecipes([...recipes,formData]);
     setFormData(initialFormState);
-    console.log(await recipes);
   }
   
   // TODO: When the form is submitted, a new recipe should be created, and the form contents cleared.
@@ -24,7 +23,7 @@ function RecipeCreate({ recipes, setRecipes}) {
   // TODO: Add the required submit and change handlers
   
   return (
-    <form name="create">
+    <form name="create" onSubmit={handleCreate}>
       <table>
         <tbody>
           <tr>
@@ -84,7 +83,7 @@ function RecipeCreate({ recipes, setRecipes}) {
               />
             </td>
             <td>
-              <button type="submit" onClick={handleCreate}>Create</button>
+              <button type="submit">Create</button>
             </td>
           </tr>
         </tbody>

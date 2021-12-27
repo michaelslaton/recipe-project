@@ -76,18 +76,10 @@ tbody tr:nth-child(odd){
   background-color: #fff0c7;
 }
 
-.bgWhite {
-  background-color: white;
-}
-
-.bgCream {
-  background-color: #fff0c7;
-}
-
-td:nth-child(4), th:nth-child(4){
+thead td:nth-child(4), th:nth-child(4){
   width:30%
 }
 
-td:nth-child(5), th:nth-child(5){
+thead td:nth-child(5), th:nth-child(5){
   width:30%;
 }
